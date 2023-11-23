@@ -1,0 +1,6 @@
+This project come from darshilparmar
+
+I met problems in this project
+first, I cant use AWS Glue Crawler I dont know why but it cant create crawler to manage my s3
+second, I new to AWS and kafka so it take around 1 weeks to finish this project 
+third, it is about version of kafka I change it because kafka that darshil provide I cant find
