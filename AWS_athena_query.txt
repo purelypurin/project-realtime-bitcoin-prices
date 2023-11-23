@@ -1,0 +1,19 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS yourdatabase.bitcoin_prices (
+  `date` DATE,
+  `time` STRING,
+  `usd_rate` FLOAT,
+  `thb_rate` FLOAT
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
+WITH SERDEPROPERTIES (
+  'serialization.format' = ',',
+  'field.delim' = ','
+)
+LOCATION 's3://yourbucket/folder/'
+TBLPROPERTIES ('skip.header.line.count'='1');
+
+This will create a table that contain date,time,usd_rate,thb_rate
+
+
+show table
+SELECT * FROM yourdatabase.bitcoin_prices ;
